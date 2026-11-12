@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binary Tree Visualizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <h1>Binary Tree Visualizer</h1>
+        <p>Understand traversal patterns and tree operations with a simple interactive visual.</p>
+      </div>
+    </header>
+
+    <main class="container layout">
+      <section class="panel controls-panel">
+        <h2>Controls</h2>
+
+        <label for="traversalSelect">Traversal</label>
+        <select id="traversalSelect">
+          <option value="inorder">Inorder</option>
+          <option value="preorder">Preorder</option>
+          <option value="postorder">Postorder</option>
+        </select>
+
+        <label for="insertValue">Insert Value</label>
+        <input id="insertValue" type="number" min="0" max="99" placeholder="e.g. 25" />
+
+        <div class="button-row">
+          <button id="insertBtn" class="primary">Insert</button>
+          <button id="generateBtn">New Tree</button>
+        </div>
+
+        <button id="traverseBtn" class="wide">Traverse</button>
+      </section>
+
+      <section class="panel tree-panel">
+        <h2>Tree</h2>
+        <div id="treeRoot" class="tree-root"></div>
+      </section>
+
+      <section class="panel info-panel">
+        <h2>Info</h2>
+        <div id="algorithmDescription" class="description"></div>
+        <div id="complexity" class="complexity"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
